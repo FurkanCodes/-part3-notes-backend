@@ -1,2 +1,2 @@
-# -part3-notes-backend
-The backend application for Notes app
+# phonebook-backend
+The backend application for phonebook app
