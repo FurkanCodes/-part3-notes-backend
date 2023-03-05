@@ -19,11 +19,12 @@ const personsSchema = new mongoose.Schema({
     type: String,
     minLength: 5,
     required: true,
+    unique: true,
   },
   number: {
-    type: Number,
-    minLength: 5,
+    type: String,
     required: true,
+    minLength: 8,
   },
 });
 

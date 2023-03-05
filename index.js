@@ -90,12 +90,12 @@ app.post("/api/persons/", (request, response, next) => {
     });
   }
 
-  if (persons.find((person) => person.name === body.name)) {
-    console.log("name must be unique");
-    return response.status(400).json({
-      error: "name must be unique",
-    });
-  }
+  // if (persons.find((person) => person.name === body.name)) {
+  //   console.log("name must be unique");
+  //   return response.status(400).json({
+  //     error: "name must be unique",
+  //   });
+  // }
   const person = new Person({
     name: body.name,
     number: body.number,
