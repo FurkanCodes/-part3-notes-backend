@@ -84,11 +84,11 @@ app.delete("/api/persons/:id", (request, response, next) => {
 app.post("/api/persons/", (request, response, next) => {
   const body = request.body;
 
-  // if (!body.number || !body.name) {
-  //   return response.status(422).json({
-  //     error: "please input a number and a name ",
-  //   });
-  // }
+  if (!body.number || !body.name) {
+    return response.status(422).json({
+      error: "please input a number and a name ",
+    });
+  }
 
   const person = new Person({
     name: body.name,
